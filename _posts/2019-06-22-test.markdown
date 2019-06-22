@@ -12,4 +12,4 @@ import numpy as np
 
 def foo():
    print("Hello World")
-{ % endhighlight python % }
+{ % endhighlight % }
