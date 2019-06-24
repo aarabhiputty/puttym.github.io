@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default 
 title: About
-permalink: /about/
+#permalink: /about/
 ---
 I am Madhukara Putty. I am trying to understand how satellites move in their
 orbits and how their motion can be controlled. This blog is a collection
