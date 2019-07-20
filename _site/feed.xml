@@ -1,32 +1,1002 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-24T15:14:00+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Madhukara Putty</title><entry><title type="html">Test post</title><link href="http://localhost:4000/space/2019/06/24/test.html" rel="alternate" type="text/html" title="Test post" /><published>2019-06-24T00:00:00+05:30</published><updated>2019-06-24T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/06/24/test</id><content type="html" xml:base="http://localhost:4000/space/2019/06/24/test.html">&lt;p&gt;This is a test page.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-20T22:46:34+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sea of Tranquility</title><entry><title type="html">Introduction to Spacraft Attitude Control</title><link href="http://localhost:4000/space/2019/07/20/intro-attitude-control.html" rel="alternate" type="text/html" title="Introduction to Spacraft Attitude Control" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/07/20/intro-attitude-control</id><content type="html" xml:base="http://localhost:4000/space/2019/07/20/intro-attitude-control.html"></content><author><name></name></author><category term="space" /><summary type="html"></summary></entry><entry><title type="html">Undertsanding Command line Arguments in Python</title><link href="http://localhost:4000/programming/2019/07/20/command-line-arguments.html" rel="alternate" type="text/html" title="Undertsanding Command line Arguments in Python" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/command-line-arguments</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/command-line-arguments.html">&lt;p&gt;Often, passing arguments to a programme through the command line is a useful
+option. Python’s &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; moduel provides the necessary tools for
+achieving this.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Passing command line arguments involves the following steps:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Import &lt;code&gt;ArgumentParser&lt;/code&gt; class from &lt;code&gt;argparse&lt;/code&gt; module&lt;/li&gt;
+	&lt;li&gt;Create an instance of &lt;code&gt;ArgumentParser&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;List out the arguments that you pass on through the command line&lt;/li&gt;
+	&lt;li&gt;Ask the program to inspect the command line for arguments and store them into computer memory.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These steps can be implemented as given below:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;argparse&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argparse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# x is an instance of the class ArgumentParser
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# saving command line arguments into computer memory
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# print the arguments provided
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;print()&lt;/code&gt; statement at the end confirms that the arguments
+provided via command line are indeed stored in the variable
+&lt;code&gt;arguments&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s dig a little deeper and find the datatype of the stored values.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The output of the above command clearly shows that both of them are stored as
+strings. In fact, unless specified, &lt;code&gt;argparse&lt;/code&gt; treats arguments as
+strings. Therefore, if we want to compute something, we need to specifically
+ask &lt;code&gt;argparse&lt;/code&gt; to consider the parameters as numbers (either integer
+or floating point number).&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this, we are in a position to do something useful. As an example, given
+below is a programme that takes two numbers from the command line and does some
+calculations using them.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;argparse&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Often, passing arguments to a programme through the command line is a useful option. Python’s argparse moduel provides the necessary tools for achieving this.</summary></entry><entry><title type="html">awk command examples</title><link href="http://localhost:4000/programming/2019/07/20/awk-command.html" rel="alternate" type="text/html" title="awk command examples" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/awk-command</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/awk-command.html">&lt;p&gt;Create the file &lt;code class=&quot;highlighter-rouge&quot;&gt;addresses&lt;/code&gt; with the following content.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ramesh Shetty, 34, 4th Cross, Kuvempu Nagar, Mysore KA
+Sureshi Bendre, 56, 3rd Main, T Nagar, Chennai TN
+John Simon, 24, 5th Main, Jaya Nagar, Bangalore KA
+G H Shinde, 56, 6th Main, Bandra, Mumbai MH
+S Manjrekar, 39, 8th Main, Chanakya Puri ND
+P K Reddy, 67, 9th Main, Charminar, Hyderabad AP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;syntax-for-awk-command&quot;&gt;Syntax for &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt; command&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;awk 'instructions' files &lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instructions must be enclosed in single quotes&lt;/li&gt;
+  &lt;li&gt;Instructions always contain curly brackets and dollar signs&lt;/li&gt;
+  &lt;li&gt;Each line of the file is considered a record&lt;/li&gt;
+  &lt;li&gt;Each word is considered a field&lt;/li&gt;
+  &lt;li&gt;$1, $2, $3 …. represent first, second, and third words in a line&lt;/li&gt;
+  &lt;li&gt;$0 represents the full line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;to-print-the-first-word-in-each-line&quot;&gt;To print the first word in each line&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{ print $1}'&lt;/span&gt; addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Here, space(s) is considered the separator. For &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt;, spaces and/or tabs are
+the default separators. However, this can be changes as shown below.&lt;/p&gt;
+
+&lt;h4 id=&quot;print-the-first-word-only-if-it-meets-a-condition&quot;&gt;Print the first word only if it meets a condition&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/KA/ { print $1 }'&lt;/span&gt; addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This prints the first word of the lines which contain the phrase KA.&lt;/p&gt;
+
+&lt;h4 id=&quot;to-print-the-name-in-each-address&quot;&gt;To print the name in each address&lt;/h4&gt;
+&lt;p&gt;To do this, we need to print till the first comma. That means, we should
+instruct &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt; to consider comma as the separator. Remember that the default
+separator is space and/or tab.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'{ print $1 }'&lt;/span&gt; addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'/MA/ { print $1 }'&lt;/span&gt; addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here &lt;code class=&quot;highlighter-rouge&quot;&gt;-F,&lt;/code&gt; changes the separator from space to comma.&lt;/p&gt;
+
+&lt;h4 id=&quot;rearranging-the-data-using-awk&quot;&gt;Rearranging the data using &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'{ print $1; print $2; print $3; print $4; print $5 }'&lt;/span&gt; addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Create the file addresses with the following content. Ramesh Shetty, 34, 4th Cross, Kuvempu Nagar, Mysore KA Sureshi Bendre, 56, 3rd Main, T Nagar, Chennai TN John Simon, 24, 5th Main, Jaya Nagar, Bangalore KA G H Shinde, 56, 6th Main, Bandra, Mumbai MH S Manjrekar, 39, 8th Main, Chanakya Puri ND P K Reddy, 67, 9th Main, Charminar, Hyderabad AP</summary></entry><entry><title type="html">if __name__ == “__main__” : What does it mean?</title><link href="http://localhost:4000/programming/2019/07/20/main-in-python.html" rel="alternate" type="text/html" title="if __name__ == &quot;__main__&quot; &amp;#58;  What does it mean?" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/main-in-python</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/main-in-python.html">&lt;p&gt;Simple answer: &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == &quot;__main__&quot;&lt;/code&gt; helps a programme to choose and pick
+chunks of code from other programmes.&lt;/p&gt;
+
+&lt;p&gt;Without this, the called programme will be executed fully, even if only one
+function is required by the calling programme.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at an example. Assume that we already have a programme that has
+separate functions to find square and cube of a number. Such a programme could
+be as given given below. Let’s also assume that the programme is stored in the
+file &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;argparse&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s say we just want to write a programme to compute the cube of a number.
+Since this functionality is already available in &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;, as smart
+programmers, we simply want to call that particular chunk of code and use it.
+Such a programme, say &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt; could be as given below.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;test&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;argparse&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, if you run &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt;, you will notice that only the function &lt;code class=&quot;highlighter-rouge&quot;&gt;cube&lt;/code&gt; from
+&lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt; is executed, but not the entire programme. Without &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ ==
+&quot;__main__&quot;&lt;/code&gt;: condition, running &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt; results in completely running
+&lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt; (this actually gives an error msg).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;whats-happening&quot;&gt;What’s happening?&lt;/h3&gt;
+
+&lt;p&gt;When executing a programme, the Python interpreter creates the special variable
+&lt;code class=&quot;highlighter-rouge&quot;&gt;__name__&lt;/code&gt; and assigns a string value to it. In the case of a stand-alone
+programme, the value assigned is &lt;code class=&quot;highlighter-rouge&quot;&gt;__main__&lt;/code&gt;. This is the case when &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt; is
+run.&lt;/p&gt;
+
+&lt;p&gt;However, when the programme is executed as module, then the module name is
+assigned to the &lt;code class=&quot;highlighter-rouge&quot;&gt;__name__&lt;/code&gt; variable. This is what happens when &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt;,
+which calls a function from &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;, is run. Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt; is used as a
+module and the value &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; is assigned to the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;__name__&lt;/code&gt; in
+&lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;. Note that this is happening in &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;, but not in &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The statement &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == &quot;__main__&quot;:&lt;/code&gt; simply checks if the value assigned
+to &lt;code class=&quot;highlighter-rouge&quot;&gt;__name__&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;__main__&lt;/code&gt;. When running &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;, this check yields a
+positive result and the subsequent statement is executed.&lt;/p&gt;
+
+&lt;p&gt;While running &lt;code class=&quot;highlighter-rouge&quot;&gt;test1.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;__name__&lt;/code&gt; has the value &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;. Therefore, 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == &quot;__main__&quot;:&lt;/code&gt; returns a negative result, and the subsequent
+statement is not executed.&lt;/p&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Simple answer: if __name__ == &quot;__main__&quot; helps a programme to choose and pick chunks of code from other programmes.</summary></entry><entry><title type="html">Pandas basics</title><link href="http://localhost:4000/programming/2019/07/20/pandas-basics.html" rel="alternate" type="text/html" title="Pandas basics" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/pandas-basics</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/pandas-basics.html">&lt;p&gt;DataFrame is the fundamental data structure provided by Pandas. It is a class
+with different attributes. In this article, &lt;code class=&quot;highlighter-rouge&quot;&gt;df&lt;/code&gt; is the name of the
+dateframe.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;creating-a-dataframe-from-a-file&quot;&gt;Creating a dataframe from a file&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;filename.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ES.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delimiter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#TXT file
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;what-columns-are-there-in-the-dataframe&quot;&gt;What columns are there in the dataframe?&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Output is an Index - a pandas data structure. This doesn't mention all the column headers
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Prints ALL column headers. An Index
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Writes columns headers into a list
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is an ‘Index’ - a data structure provided by pandas.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Accessing a column by its index
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'col_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Accessing a column by its name
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Individual columns are of type Series - one more data structure provided by
+pandas. Printing a Series prints out column values with indices.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'col_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Print first element of column col_name
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Slicing. The result is another Series
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;making-sense-of-information-in-columns&quot;&gt;Making sense of information in columns&lt;/h3&gt;
+
+&lt;p&gt;Suppose &lt;code class=&quot;highlighter-rouge&quot;&gt;col_name&lt;/code&gt; has five unique values, say 1 to 5. Since each of them can
+appear in multiple rows, it makes sense to know that how many times they have
+appeared. In other words, We want to know in how many rows 1 has appeared, in
+how many rows 2 has appeared etc.  The result is a series.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Counts the occurence of each value 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_sort_incex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Sorts the list based on the values of #col_name
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">DataFrame is the fundamental data structure provided by Pandas. It is a class with different attributes. In this article, df is the name of the dateframe.</summary></entry><entry><title type="html">sed command examples</title><link href="http://localhost:4000/programming/2019/07/20/sed-command.html" rel="alternate" type="text/html" title="sed command examples" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/sed-command</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/sed-command.html">&lt;p&gt;Create the file &lt;code class=&quot;highlighter-rouge&quot;&gt;addresses&lt;/code&gt; with the following content.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ramesh Shetty, 34, 4th Cross, Kuvempu Nagar, Mysore KA
+Suresh Bendre, 56, 3rd Main, T Nagar, Chennai TN
+John Simon, 24, 5th Main, Jaya Nagar, Bangalore KA
+G H Shinde, 56, 6th Main, Bandra, Mumbai MH
+S Manjrekar, 39, 8th Main, Chanakya Puri ND
+P K Reddy, 67, 9th Main, Charminar, Hyderabad AP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;replace-ka-with-karnataka&quot;&gt;Replace KA with Karnataka&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sed 's/ KA/, Karnataka/' addresses&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;replace-ka-and-tn-with-karnataka-and-tamil-nadu-respectively&quot;&gt;Replace KA and TN with Karnataka and Tamil Nadu respectively&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sed -e 's/ KA/Karnata/' -e 's/ TN/Tamil Nadu/' addresses&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;a-script-to-replace-abbreviations-with-state-names&quot;&gt;A script to replace abbreviations with state names&lt;/h3&gt;
+&lt;p&gt;Syntax: &lt;code class=&quot;highlighter-rouge&quot;&gt;sed -f scriptfile input_file&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Write the following commands in the file &lt;code class=&quot;highlighter-rouge&quot;&gt;states&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;s/ KA/, Karnataka/
+s/ TN/, Tamil Nadu/
+s/ MH/, Maharashtra/
+s/ ND/, New Delhi/
+s/ AP/, Andhra Pradesh/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run the following command&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; states addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-suppress-the-automatic-output&quot;&gt;To suppress the automatic output&lt;/h3&gt;
+&lt;p&gt;Syntax: &lt;code class=&quot;highlighter-rouge&quot;&gt;sed -n [instructions] [input_file]&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; states addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;saving-the-changes&quot;&gt;Saving the changes&lt;/h3&gt;
+&lt;p&gt;None of the above commands do not save the changes to the file. The changes are just printed and not saved. Changes can be saved in two ways:&lt;/p&gt;
+
+&lt;p&gt;Write the output to a new file:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; states addresses &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; newaddresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Here &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; is the redirection operator.&lt;/p&gt;
+
+&lt;p&gt;Save the changes to the same file:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; states addresses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Create the file addresses with the following content.</summary></entry><entry><title type="html">Time in Python</title><link href="http://localhost:4000/programming/2019/07/20/time-in-python.html" rel="alternate" type="text/html" title="Time in Python" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/time-in-python</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/time-in-python.html">&lt;p&gt;Python’s &lt;code class=&quot;highlighter-rouge&quot;&gt;datetime&lt;/code&gt; module provides the necessary tools to process
+information related to time. Specifically, the module supplies classes for
+manipulating dates and times. Given below are a few examples.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;to-find-current-local-time&quot;&gt;To find current local time&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;datetime.now()&lt;/code&gt; is a classmethod that returns current local time. We first
+have to import &lt;code class=&quot;highlighter-rouge&quot;&gt;datetime&lt;/code&gt; module because &lt;code class=&quot;highlighter-rouge&quot;&gt;datetime.now()&lt;/code&gt; is part of it.&lt;/p&gt;
+
+&lt;p&gt;We can get time information in another format by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;timetuple()&lt;/code&gt;
+method. &lt;code class=&quot;highlighter-rouge&quot;&gt;timetuple()&lt;/code&gt; provides year, month, day, hour, second, weekday,
+yearday, and information on daylight saving.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# module for manipulating times and dates
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# returns local current date and time
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# year, month, date, hour, minute, second, microsecond
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Neatly formatted output
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;microsecond&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weekday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yearday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timetuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# dst = 1 means daylight saving is on
+# dst = 0 means daylight saving is not on
+#dst = -1 means daylight saving info is not available 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;datetime&lt;/code&gt; contains the following classes and classmethods&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;timedelta&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromtimestamp&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;today&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromordinal&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromisoformat&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tzinfo&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;time&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromisoformat&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;datetime&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromtimestamp&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;utcfromtimestamp&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;now&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;utcnow&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;combine&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fromisoformat&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;strptime&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;timezone&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Python’s datetime module provides the necessary tools to process information related to time. Specifically, the module supplies classes for manipulating dates and times. Given below are a few examples.</summary></entry><entry><title type="html">Disturbance Environment for Earth Orbiting Satellites</title><link href="http://localhost:4000/space/2019/07/18/disturbance-environment.html" rel="alternate" type="text/html" title="Disturbance Environment for Earth Orbiting Satellites" /><published>2019-07-18T00:00:00+05:30</published><updated>2019-07-18T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/07/18/disturbance-environment</id><content type="html" xml:base="http://localhost:4000/space/2019/07/18/disturbance-environment.html">&lt;p&gt;Satellites orbiting the earth, experience the following disturbance torques:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Gravity gradient torque&lt;/li&gt;
+  &lt;li&gt;Magnetic field torque&lt;/li&gt;
+  &lt;li&gt;Torque due to solar radiation pressure&lt;/li&gt;
+  &lt;li&gt;Torque due to aerodynamic drag&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The strength of these torques varies with the altitude. For example, gravity
+gradient and magnetic field torques are strong in the Low Earth Orbit (LEO).
+On the other hand, the torque due to aerodynamic drag is practically
+non-existent in LEO and beyond, but it is the most dominant torque in the
+very low earth orbits. Torque due to solar radiation pressure is constant 
+across orbits but increases as one moves closer to the Sun.&lt;/p&gt;
+
+&lt;p&gt;The disturbance torques can not only change the attitude of the satellite but
+also influence the choice of sensors and actuators. For example, in the
+Low Earth Orbits (LEO), where the magnetic field is quite strong, we can use
+magnetic torquer rods to apply control torques. However, the torquer rods may not
+be the ideal choice in a geostationary orbit where the magnetic field is not
+strong enough to produce a decent amount of control torque. Star sensors – devices
+that provide high accuracy attitude measurements – are not  preferred in the 
+&lt;em&gt;Van Allen Belts&lt;/em&gt;. This is because the charge coupled devices (CCD) used in the
+star sensors are highly sensitive to the extreme radiation that is characterises
+Val Allen belts. Inner Van Allen belts extend from 1,600 km to 13,000, and the 
+outer belts from 19,000 km to 40,000 km.&lt;/p&gt;
+
+&lt;h3 id=&quot;gravity-gradient-torques&quot;&gt;Gravity gradient torques&lt;/h3&gt;
+&lt;p&gt;The gravitational force on a satellite in orbit varies along the length of
+the satellite. As a result of this, for elongated objects in orbit, the Center
+of Gravity (CG) may be offset from the Center of Mass (CM). This creates a 
+torque called the &lt;em&gt;Gravity gradient tortue&lt;/em&gt;. This is hard for us to imagine
+becaue, gravity, as we experience on earth is fairly constant – the force we
+experience on top of a two-storied building is not different from the force
+we experience on the street!&lt;/p&gt;
+
+&lt;p&gt;It is worth noting that the location of CG is a function not only of the mass
+configuration of the satellite, but also its current attitude.&lt;/p&gt;
+
+&lt;h3 id=&quot;magnetic-torque&quot;&gt;Magnetic Torque&lt;/h3&gt;
+
+&lt;p&gt;Satellite carry a number of electronic equipment that generate a residual
+magnetic field inside the vehicle. The dipole moment of these fields is of the
+order of &lt;script type=&quot;math/tex&quot;&gt;0.1 - 20\, \mathrm{A \cdot m^{2}}&lt;/script&gt; and is a function of the spacecraft
+size. In addition to this, the satellite also moves in a region that is inside
+the spehere of influence of earth’s magnetic field. If the magnetic dipole 
+corresponding to the residual field is not aligned with the earth’s field, then
+the dipole experiences a torque given by &lt;script type=&quot;math/tex&quot;&gt;\mathbf{D \times B}&lt;/script&gt;, where 
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt; is the dipole moment corresponding to the residual field, and
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{B}&lt;/script&gt; is the strength of earth’s magnetic field. Clearly, the torque
+vanishes when &lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt; is aligned with &lt;script type=&quot;math/tex&quot;&gt;\mathbf{B}&lt;/script&gt;. We see this torque
+in action when the earth’s magnetic field pulls a compass needle until the needle
+is aligned with earth’s magnetic field.&lt;/p&gt;
+
+&lt;p&gt;For calculating the torque experienced by the satellite dur to earth’s magnetic
+field, it is sufficient to consider the earth’s magnetic field to be eminating
+from a giant bar magnet hiding inside the earth. However, we must remember that
+it is just an approximation and earth’s magnetic behaviour is much more complex.&lt;/p&gt;
+
+&lt;h3 id=&quot;torque-due-to-solar-radiation-pressure&quot;&gt;Torque due to solar radiation pressure&lt;/h3&gt;
+
+&lt;p&gt;Sunlight is a stream of photons. When an object is lit by sunlight, the photons
+strike the object and transfer their momentum due to which the object experiences
+some pressure. The actual pressure experienced by the object is a function of the
+material properties of the object. Materials with good reflectivity experience
+more pressure than those with good abosorbitivity. For example, a perfect
+reflector, like an ideal mirror, will experience a pressure that is twice the
+pressure experienced by a perfect absorber.&lt;/p&gt;
+
+&lt;p&gt;Solar radiation pressure torque results from an offset from the center of
+gravity of the satellite. Radiation pressure on a satellite can be thought to
+be acting on a single point called the &lt;em&gt;center of pressure&lt;/em&gt;.  A torque results
+whenever the center of pressure is offset from the center of gravity of the
+satellite (or any surface that is exposed to the Sun).&lt;/p&gt;
+
+&lt;p&gt;To understand how solar radiation pressure affects dynamic of a satellite, imagine
+a flat surface on the satellite that is exposed to the Sun. Also imagine that
+half of the plate us painted black and has higher absorbtivity than the other 
+half. When sun rays awash the surface, the two halfs experience different pressures
+because of their different material properties. This creates an offset between
+center of pressure and center of gravity of the surface which results in torque.&lt;/p&gt;
+
+&lt;p&gt;In general, a satellite will have surfaces with different material properties
+simultaneously exposed to the Sun. For example, solar arrays absorb more radiation
+than a polished mettalic surface. Moreover, different surfaces surfaces are at 
+different angles to the Sun. Surfaces that are directly facing the Sun receive
+more radiation and experience more pressure than those that are at an angle.&lt;/p&gt;
+
+&lt;p&gt;While solar radiation pressure can really influence the dynamics of a spacecraft,
+the magnitude of the torque gets stronger as the spacecraft gets closer to the 
+Sun. As we see in the next article, torque due to radiation pressure is not
+the strongest disturbance torque experienced by a satellite.&lt;/p&gt;
+
+&lt;h3 id=&quot;torque-due-to-atmospheic-drag&quot;&gt;Torque due to atmospheic drag&lt;/h3&gt;
+
+&lt;p&gt;Atmospheric drag results in a torque when the center of atmospheric pressure is
+not aligned with the center of gravity of the spacecraft.&lt;/p&gt;
+
+&lt;p&gt;Atmospheric drag is a significant force on earth. If you are wondering why I am
+calling it significant, try cycling against the wind on a windy day! Drag is a 
+lesser evil in space because the atmospheric density plummets exponentially
+with altitude. Spacecraft in very low orbits, like the International
+Space Station, do encounter enough number of particles to cause a noticeable
+effect. In fact, in these orbits, drag is stronger than all other disturbances.
+However, it fades in strength as one moves to higher orbits in LEO, and
+practically disappears at Medium Earth Orbits (MEO).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;References&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;NASA. &lt;em&gt;NASA’s Van Allen Probes Spot an Impenetrable Barrier in Space&lt;/em&gt;. 
+https://www.nasa.gov/content/goddard/van-allen-probes-spot-impenetrable-barrier-in-space
+Accessed on July 19, 2019&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;S R Starin and J Eterno. 19.1 Attitude Determination and Control System&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="space" /><summary type="html">Satellites orbiting the earth, experience the following disturbance torques:</summary></entry><entry><title type="html">How Strong are the Disturbance Torques?</title><link href="http://localhost:4000/space/2019/07/18/quantifying-disturbance-torques.html" rel="alternate" type="text/html" title="How Strong are the Disturbance Torques?" /><published>2019-07-18T00:00:00+05:30</published><updated>2019-07-18T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/07/18/quantifying-disturbance-torques</id><content type="html" xml:base="http://localhost:4000/space/2019/07/18/quantifying-disturbance-torques.html">&lt;p&gt;In this article, we quantify the disturbance torques that we discussed in the
+previous article. For this purpose, we consider a hypothetical satellite with
+the following properties. The calculated torque values are given at the end of
+the article.&lt;/p&gt;
+
+&lt;h3 id=&quot;properties-of-the-hypothetical-satellite&quot;&gt;Properties of the hypothetical satellite&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mass:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;215\, \mathrm{kg}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Moments of inertia:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;I_{x} \approx I_{z} \approx 90\, \mathrm{kg \cdot
+m^{2}}&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;I_{y} \approx 60\, \mathrm{kg \cdot m^{2}}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Orbit altitude:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;700\, \mathrm{km}&lt;/script&gt;, Circular&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Lifetime:&lt;/strong&gt; 5 years&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Slew rate:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+&lt; 0.1^{\circ} \mathrm{/ s} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pointing accuracy:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;\approx 0.1^{\circ}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mission:&lt;/strong&gt; Earth-pointing except for one optional &lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; maneuver
+per month to a target of opportunity&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;calculating-gravity-gradient-torque&quot;&gt;Calculating gravity gradient torque&lt;/h3&gt;
+
+&lt;p&gt;Gravity gradient torque depends mainly on the orbital radius and the moments of
+inertia of the satellite. Between the two, orbital radius has a stronger
+effect.  It also depends on slew angle with torque reaching a maximum for a
+slew angle of &lt;script type=&quot;math/tex&quot;&gt;45^{\circ}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The magnitude of gravity grdient torque can be estimated using the formula
+given below.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+T_{g} = \frac{3 \mu}{2 R^{3}}\left|I_{z} - I_{y}\right| \sin\, 2\theta
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{g}&lt;/script&gt; – Torque due to gravity gradient disturbances&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\mu = 3.986 \times 10^{14}\, \mathrm{m^{3} s^{-2}}&lt;/script&gt;  is Earth’s
+gravitational constant&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;R = (6378 + 700) = 7078\, \mathrm{km}&lt;/script&gt; is the orbital radius&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;I_{z}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;I_{y}&lt;/script&gt; are moments of inertia of the satellite along row and
+pitch axes respectively&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta = 30^{\circ}&lt;/script&gt; is the maximum deviation of the z-axis from the local
+vertical.  Note that this deviation happens when the satellite is in
+target-of-opprtunity mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;calculating-torque-due-to-magnetic-field&quot;&gt;Calculating torque due to magnetic field&lt;/h3&gt;
+
+&lt;p&gt;Magnetic torque increases linearly with both the dipole moment of the residual
+magnetic field and earth’s magnetic field strength at the orbit.  However, the
+orbital radius has the strongest influence on this because earth’s magnetic
+field strength plummets drastically as one moves farther away from the earth.&lt;/p&gt;
+
+&lt;p&gt;A simplified expression for magnetic torque is given below.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+T_{m} = DB \approx D \frac{2M}{R^{3}}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{m}&lt;/script&gt; is the torque due to magnetic field&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; is the dipole moment of spacecraft’s residual magnetic field. We assume
+it to be &lt;script type=&quot;math/tex&quot;&gt;1 \mathrm{A \cdot m^{2}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; is strength of earth’s magnetic field; approximated as
+&lt;script type=&quot;math/tex&quot;&gt;\frac{2M}{R^{3}}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;M = 7.95 \times 10^{15}\, \mathrm{Tesla \cdot
+m^{3}}&lt;/script&gt;, is the magnetic moment of the earth, and &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the distance from
+the center of the dipole (earth) to the spacecraft.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;calculating-torque-due-to-solar-radiation-pressure&quot;&gt;Calculating torque due to solar radiation pressure&lt;/h3&gt;
+
+&lt;p&gt;Torque due to solar radiation pressure depends on a number factors including
+the area of surface exposed to the Sun, material properties of the exposed
+surface, and angle of incidence of the Sun. It should obviously depend on
+distance from the Sun, but this dependence is concealed in solar constant – a
+factor that increases as we move closer to the Sun.&lt;/p&gt;
+
+&lt;p&gt;A simplified equation for calculating torque due to solar radiation pressure
+is given below.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+T_{sp} = \frac{F_{s}}{c} A_{s} (1+q) (c_{ps} - c_{g})\, \cos I
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{sp}&lt;/script&gt; is the torque due to solar radiation pressure&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;F_{s} = 1361\, \mathrm{W/m^{2}}&lt;/script&gt; is the solar constant. It is the energy
+received from the Sun over a unit area in one second&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;c = 3 \times 10^{8} \mathrm{m/s}&lt;/script&gt; is the speed of light in vacuum&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;A_{s}&lt;/script&gt; is the area of the surface exposed to the Sun. It is assumed to be 
+&lt;script type=&quot;math/tex&quot;&gt;2\, \mathrm{m} \times 1.5\, \mathrm{m} = 3\, \mathrm{m^{2}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt; is the reflectance factor. It is &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; for perfect absorbers and &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;
+for perfect reflectors. All real materials have their &lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt; values between
+these limits. For our example, we assume &lt;script type=&quot;math/tex&quot;&gt;q = 0.6&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;(c_{ps} - c_{g})&lt;/script&gt; is center of pressure’s offset from the center of gravity.
+Assumed to be &lt;script type=&quot;math/tex&quot;&gt;0.3&lt;/script&gt; in this example&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; is the angle of incidence of the Sun. It is assumed to be zero&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;calculating-torque-due-to-atmospheric-drag&quot;&gt;Calculating torque due to atmospheric drag&lt;/h3&gt;
+
+&lt;p&gt;Atmospheric drag is proportional to the square of the speed of the satellite.
+However, the effect of satellite speed is balanced by very low atmospheric
+densities that are common in outer space. Speed will have a greater influence
+in very low earth orbits where the atmospheric density is not really low.
+That’s why atmospheric drag torque is strongest in those orbits and practically
+vanishes at MEO.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+T_{a} = \frac{1}{2} \rho C_{d} A V^{2} \left(c_{pa} - c_{g}\right)
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\rho = 10^{-13}\, \mathrm{kg/m^{3}}&lt;/script&gt; is the atmospheric density at the 
+orbit altitude. For comparison, density at sea level is a little more than 
+&lt;script type=&quot;math/tex&quot;&gt;1\, \mathrm{kg/m^{3}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;C_{d}&lt;/script&gt; is the drag coefficient of the spacecraft which is assumed to be
+&lt;script type=&quot;math/tex&quot;&gt;2.0&lt;/script&gt;. For comparison, an aerodynamically designed Mercedes Benz A-Class has
+a drag coefficient of &lt;script type=&quot;math/tex&quot;&gt;0.22&lt;/script&gt; and a typical bus’ drag coefficient is in the
+range of &lt;script type=&quot;math/tex&quot;&gt;0.6 - 0.8&lt;/script&gt;. Lower the drag coefficient, better the aerodynamic
+efficieny&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is the surface area. Assumed to be &lt;script type=&quot;math/tex&quot;&gt;3\, \mathrm{m^{2}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; is the spacecraft velocity. In a &lt;script type=&quot;math/tex&quot;&gt;700\, \mathrm{km}&lt;/script&gt; orbit, it is about
+&lt;script type=&quot;math/tex&quot;&gt;7,504\, \mathrm{m/s}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\left(c_{pa} - c_{g}\right)&lt;/script&gt; is center of pressure’s offset from the center
+of gravity. Assumed to be &lt;script type=&quot;math/tex&quot;&gt;0.2&lt;/script&gt; in this example&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;calculated-torque-values&quot;&gt;Calculated torque values&lt;/h3&gt;
+
+&lt;p&gt;All values in &lt;script type=&quot;math/tex&quot;&gt;\mathrm{N \cdot m}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+T_{g} = 4.4 \times 10^{-5} \\
+T_{m} = 4.5 \times 10^{-5} \\
+T_{s} = 6.6 \times 10^{-6} \\
+T_{a} = 3.4 \times 10^{-6}
+\end{aligned}&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;References&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;W J Larson et al. Space Mission Analysis and Design. 3rd Edition. Published
+jointly by Microcosm Press and Kluwer Academic Publishers&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Firstpost. Mercedes-Benz A-Class sedan has lowest drag-coefficient of any
+production car.
+https://www.firstpost.com/tech/auto/mercedes-benz-a-class-sedan-has-lowest-drag-coefficient-of-any-production-car-4822801.html
+Accessed on July 18, 2019&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Engineering Toolbox. Drag Coefficient.
+https://www.engineeringtoolbox.com/drag-coefficient-d_627.html Accessed on
+July 18, 2019&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="space" /><summary type="html">In this article, we quantify the disturbance torques that we discussed in the previous article. For this purpose, we consider a hypothetical satellite with the following properties. The calculated torque values are given at the end of the article.</summary></entry><entry><title type="html">Sizing Attitude Control Hardware</title><link href="http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html" rel="alternate" type="text/html" title="Sizing Attitude Control Hardware" /><published>2019-06-15T00:00:00+05:30</published><updated>2019-06-15T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/06/15/sizing-attitude-hardware</id><content type="html" xml:base="http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html">&lt;p&gt;Active control of spacecraft attitude can be achieved by combinations of&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reaction wheels&lt;/li&gt;
+  &lt;li&gt;Momentum wheels&lt;/li&gt;
+  &lt;li&gt;Control moment gyros (CMG)&lt;/li&gt;
+  &lt;li&gt;Thrusters and&lt;/li&gt;
+  &lt;li&gt;Magnetic torquers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this section, we size each of the above hardware (except CMG) for the hypothetical
+satellite with the following specifications:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mass:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;215\, \mathrm{kg}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Moments of inertia:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;I_{x} \approx I_{z} \approx 90\, \mathrm{kg \cdot
+m^{2}}&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;I_{y} \approx 60\, \mathrm{kg \cdot m^{2}}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Orbit altitude:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;700\, \mathrm{km}&lt;/script&gt;, Circular&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Lifetime:&lt;/strong&gt; 5 years&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Slew rate:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+&lt; 0.1^{\circ} \mathrm{/ s} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pointing accuracy:&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;\approx 0.1^{\circ}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mission:&lt;/strong&gt; Earth-pointing except for one optional &lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; maneuver
+per month to a target of opportunity&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that the same satellite was used for calculating disturbance torques.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sizing-of-reaction-wheels&quot;&gt;Sizing of reaction wheels&lt;/h3&gt;
+&lt;p&gt;Sizing of reaction wheels requires determination of two parameters. They are:&lt;/p&gt;
+
+&lt;p&gt;1 &lt;strong&gt;Angular momentum capacity&lt;/strong&gt;: Angular momentum capacity is calculated
+keeping in mind the cyclic disturbances.  The wheel should have enough capacity
+to store angular momentum resulting from cyclic disturbances without the need
+for frequent desaturation. The minimum angular momentum capacity required is
+determined by the average cyclic disturbance torque in a quarter or a half
+orbit.&lt;/p&gt;
+
+&lt;p&gt;In addition to calculating the momentum storage capacity, we shoudld also decide 
+how often should the wheels be desaturated. This factor depends more on secular
+disturbances because angular momentum resulting from them accumulate over time and
+push the wheel towards saturation. Therefore, frequency of wheel desaturation 
+depends on the secular torques and the momentum storage capacity of the wheel.&lt;/p&gt;
+
+&lt;p&gt;For 3-axis control, at least three wheels are required across each of the axes.
+A fourth redundant wheel is highly desirable to continue the mission in the event
+of failure of a wheel. Ideally, the wheels are mounted perpendicular to each 
+other. Other configurations are also possible, but they come at a cost.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;T_{D}&lt;/script&gt; be the worst case cyclic disturbance torque. If it is due to gravity
+gradient, then the maximum disturbance accumulates in quarter of an orbit – like 
+a sinusoidal wave. A simplified expression for such a disturbance torque is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+h_{RW} = (T_{D}) \frac{\text{P}}{4}\,(0.707)
+\end{equation}
+\label{eq:ang-mom-capacity}&lt;/script&gt;
+
+&lt;p&gt;where,&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;h_{RW}&lt;/script&gt; is the angular momentum of the wheel&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{D}&lt;/script&gt; is the worst case disturbance torque due to gravity gradient&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;0.707&lt;/script&gt; is the rms value of a sinusoidal function&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P=5925\, \mathrm{s}&lt;/script&gt; is the period of the satellite. It is calculated using
+the formula &lt;script type=&quot;math/tex&quot;&gt;\frac{2\pi}{\sqrt{\mu}} r^{3/2}&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\mu = 398,600\,
+\mathrm{km^{3}/s^{2}}&lt;/script&gt; is the gravitational parameter, and &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the radius
+of the satellite’s orbit as measured from the center of the earth.&lt;/p&gt;
+
+&lt;p&gt;The worst case gravity gradient torque is experienced when the satellite is
+operating in &lt;em&gt;target-of-opportunity&lt;/em&gt; mode. The corresponding torque is 
+&lt;script type=&quot;math/tex&quot;&gt;4.5 \times 10^{-5} \mathrm{N \cdot m}&lt;/script&gt;. Plugging in these values into 
+\eqref{eq:ang-mom-capacity}, the angular momentum capcity of the wheel is found
+to be,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\boxed{h_{RW} = 4.6 \times 10^{-2}\, \mathrm{N \cdot m \cdot s}}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;We could go with a small reaction wheel with a momentum storage of 
+&lt;script type=&quot;math/tex&quot;&gt;0.4\, \mathrm{N \cdot m \cdot s}&lt;/script&gt;. This would also provide more than
+9x margin.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Torque authority&lt;/strong&gt;: Torque capacity is mostly driven by slew rate 
+requirements. Slew rate and the required torque are related by the expression,&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\frac{\theta}{2} = \frac{1}{2}\frac{T_{RW}}{I}\left(\frac{t}{2}\right)^{2}
+\end{equation}
+\label{eq:wheel-torque}&lt;/script&gt;
+
+&lt;p&gt;where,&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta = 30^{\circ} = 30 \times \frac{\pi}{180}\, \mathrm{rad}&lt;/script&gt; is the slew 
+angle&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{RW}&lt;/script&gt; is the torque required for the slew&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;I = 90\, \mathrm{kg \cdot m^{2}}&lt;/script&gt; is the moment of inertia of the satellite 
+along the slew axis&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;t=600\, \mathrm{s}&lt;/script&gt; is the time taken for slew.&lt;/p&gt;
+
+&lt;p&gt;Solving for &lt;script type=&quot;math/tex&quot;&gt;T_{RW}&lt;/script&gt; in \eqref{eq:wheel-torque}, and substituting the above
+values, we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\boxed{T_{RW} = 5.24 \times 10^{-4}\, \mathrm{N \cdot m}}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sizing-of-momentum-wheels&quot;&gt;Sizing of momentum wheels&lt;/h3&gt;
+&lt;p&gt;Momentum wheel spins almost at constant speed about the pitch axis. Unlike 
+reaction wheels, momentum wheels do not change the attitude of the satellite,
+but only maintain the current attitude.&lt;/p&gt;
+
+&lt;p&gt;Since the momentum wheel spins along the pitch axis, it can influence both
+roll and yaw accuracies. Yaw accuracy, disturbance torque, and the wheel 
+momentum are related by the expression,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+T_{D} \times \frac{P}{4} = h_{MW} \theta_{a}
+\end{equation}
+\label{eq:mom-wheel}&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\theta_{a}&lt;/script&gt; is the yaw accuracy in radian.&lt;/p&gt;
+
+&lt;p&gt;Solving \eqref{eq:mom-wheel} for &lt;script type=&quot;math/tex&quot;&gt;h_{MW}&lt;/script&gt;, and substituting the values, we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\boxed{h_{MW} = 37.36\, \mathrm{N \cdot m \cdot s}}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sizing-magnetic-torquers&quot;&gt;Sizing magnetic torquers&lt;/h3&gt;
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt; be the dipole moment of the residual magnetic field inside
+the spacecraft. If &lt;script type=&quot;math/tex&quot;&gt;\mathbf{B}&lt;/script&gt; is the strength of the earth’s magnetic field,
+then the maximum torque experienced by the dipole is given by &lt;script type=&quot;math/tex&quot;&gt;T = D \cdot B&lt;/script&gt;, 
+where &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; are the magnitudes of the corresponding vector quantities.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;T = 4.5 \times 10^{-5}\, \mathrm{N \cdot m}&lt;/script&gt; and 
+&lt;script type=&quot;math/tex&quot;&gt;B = 4.5 \times 10^{-5}\, \mathrm{Tesla}&lt;/script&gt;, the required dipole moment turns 
+out to be&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\boxed{D = 1\, \mathrm{A \cdot m^{2}}}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;I am not able to understand this because exactly the same equation was used
+to calculate the torque due to magnetic field with an assumed dipole moment
+of &lt;script type=&quot;math/tex&quot;&gt;1\, \mathrm{A \cdot m^{2}}&lt;/script&gt; !&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sizing-thrusters&quot;&gt;Sizing thrusters&lt;/h3&gt;
+&lt;p&gt;Thrusters provide control torque to the satellite. Unlike reaction wheels, they
+can change the total angular momentum of the satellite. They can also be used to
+desaturate the wheels.&lt;/p&gt;
+
+&lt;p&gt;The torque provided by a thruster is given by,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\mathbf{T} = \mathbf{F \times L}.
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;The torque is maximum when the direction of the force and the moment arm are
+perpendicular to each other. Therefore, to counteract the worst-case disturbance
+torque, the force required is,&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
 \begin{align*}
-  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-      \vdots &amp; \ddots &amp; \vdots \\
-      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*} %]]&gt;&lt;/script&gt;</content><author><name></name></author><category term="space" /><summary type="html">This is a test page.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/06/22/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-06-22T08:28:39+05:30</published><updated>2019-06-22T08:28:39+05:30</updated><id>http://localhost:4000/jekyll/update/2019/06/22/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/06/22/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+F &amp;= \frac{T_{D}}{L} \\
+  &amp;= \frac{4.5 \times 10^{-5}}{0.5} \\
+  &amp;= 9 \times 10^{-5}\, \mathrm{N}.
+\end{align*} %]]&gt;&lt;/script&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;T_{D}&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;L&lt;/script&gt; are the magnitudes of the vector quantities
+force, worst-case disturbance torque, and thruster moment arm respectively.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;The required force for counteracting worst-case disturbance torque is very small.
+This indicates that the thruster sizing is more likely to be determined by
+slew rate requirements.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;sizing-force-level-to-meet-slew-rates&quot;&gt;&lt;strong&gt;Sizing force level to meet slew rates&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;A thruster can change the angular momentum of the spacecraft by providing control
+torque. In our example spacecraft, the slew rate requirement is given to be
+&lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; in less than 10 minutes. We take the highest slew rate to be 
+&lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; in 1 min. The required angular velocity for this maneuver is,&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\dot{\theta} = \frac{30^{\circ}}{60\, \mathrm{s}} = 0.5^{\circ}\, \mathrm{s^{-1}}.
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;The entire slewing maneuver can be divided into three parts:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The spacecraft accelerates angularly until its velocity reaches the target
+value &lt;script type=&quot;math/tex&quot;&gt;0.5^{\circ}\, \mathrm{s^{-1}}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;The spacecraft maintains the angular velocity until the maneuvering operation
+is over&lt;/li&gt;
+  &lt;li&gt;The spacecraft decelerates angularly until its angular velocity reaches
+zero.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s assume that the acceleration and deceleration each will take 5% of the 
+total maneuver time (1 min). The corresponding angular acceleration is,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+\ddot{\theta} &amp;= \frac{\dot{\theta}}{t} \\
+              &amp;= \frac{0.5^{\circ}\, \mathrm{s^{-1}}}{3\, \mathrm{s}} \\
+              &amp;= 0.169^{\circ}\, \mathrm{s^{-2}} \\
+              &amp;= 2.91 \times 10^{-3}\, \mathrm{rad \cdot s^{-2}} 
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;To find the corresponding force, we use the relation &lt;script type=&quot;math/tex&quot;&gt;T=F_{slew}L=I\ddot{\theta}&lt;/script&gt;,
+where &lt;script type=&quot;math/tex&quot;&gt;I = 90\, \mathrm{kg \cdot m^{2}}&lt;/script&gt; is the moment of inertia across the 
+roll (x) axis.&lt;/p&gt;
+
+&lt;p&gt;Solving for &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;, and substituting the values, we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\boxed{F_{slew} = 0.52\, \mathrm{N}}.
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;A force of same magnitude, but applied in opposite direction, will be required
+for deceleration.&lt;/p&gt;
+
+&lt;h4 id=&quot;sizing-force-levels-for-momentum-dumping&quot;&gt;&lt;strong&gt;Sizing force levels for momentum dumping&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Secular disturbances push reaction wheels towards their saturation speeds.
+Hence, wheels must be slowed down and desaturated regularly. The force required
+to desaturate a wheel depends on the momentum storage capacity of the wheel
+and the time it takes to desaturate the wheel.&lt;/p&gt;
+
+&lt;p&gt;The force level for desaturation of one wheel can be calculated by the formula,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+F_{desat} = \frac{h}{Lt}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; is the is the momentum storage of the wheel calculated earlier in
+this article. Assuming that we want to desaturate one wheel in 1 sec, we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\boxed{F_{desat} = 0.8\, \mathrm{N}}
+\end{equation*}&lt;/script&gt;
+
+&lt;h4 id=&quot;how-many-times-should-the-thruster-fire&quot;&gt;&lt;strong&gt;How many times should the thruster fire?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Assume that the thruster fires only for&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The &lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; slew maneuver&lt;/li&gt;
+  &lt;li&gt;Desaturation of reaction wheels&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mission requirements state that the &lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; maneuvers are needed only
+once in a month. Each maneuver has an acceleration pulse and a decelaration pulse.
+Also, controlling movement of spacecraft’s yaw axis requires rotation of the
+spacecraft along pitch and roll axes, each of which require a separate pulse.
+Therefore, each maneuver needs,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\text{2 pulses (for accn. and decn.)} \times \text{2 axes} = \text{4 pulses}.
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;30^{\circ}&lt;/script&gt; slew maneuver is a monthly event, there are &lt;script type=&quot;math/tex&quot;&gt;4 \times 12
+= 48&lt;/script&gt; pulses in a year.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s look at desaturation of wheels. Assume that there are 3 wheels and
+each of them must be desaturated once every day. In one year, desaturation results
+in,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\text{1 pulse} \times \text{3 wheels} \times \text{365 days} = \text{1095 pulses}.
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;Therefore, total number of pulses per year is &lt;script type=&quot;math/tex&quot;&gt;48 + 1095 = 1143&lt;/script&gt;. Since the 
+design life of the satellite is 5 years, the thruster has to fire 
+&lt;script type=&quot;math/tex&quot;&gt;1143 \times 5 = 5715&lt;/script&gt; pulses.&lt;/p&gt;
+
+&lt;p&gt;Pulse ratings for small thrusters typically varies between 20,000 and 50,000.
+Therefore, finding the thruster that meets our requirement won’t be a problem.&lt;/p&gt;
+
+&lt;h4 id=&quot;estimating-propellant-mass&quot;&gt;&lt;strong&gt;Estimating propellant mass&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Propollant mass consumed is a function of the force required and the duration
+for which that force must be applied. It also depends on the specific impulse,
+&lt;script type=&quot;math/tex&quot;&gt;I_{sp}&lt;/script&gt;, of the fuel – larger the value of &lt;script type=&quot;math/tex&quot;&gt;I_{sp}&lt;/script&gt; lower the fuel 
+required.&lt;/p&gt;
+
+&lt;p&gt;The first step in estimating propellant mass is the calculation of total impulse.
+Impulse is the product of force and the duration of application of the force.
+The total impulse is the sum of slew maneuver impulse and the wheel desaturation
+impulse.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\text{Impulse}_{tot} = \text{Impulse}_{slew} + \text{Impulse}_{desat}
+\end{equation*}&lt;/script&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Calculatinng slew maneuver impulse&lt;/strong&gt;: The slew maneuver has an acceleration
+and a deceleration pulse each lasting &lt;script type=&quot;math/tex&quot;&gt;3\, \mathrm{s}&lt;/script&gt;. The corresponding total
+pulse duration over satellite’s design life is&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+48\, \text{per year} \times 5 \text{years} \times (3+3) \text{second} = 
+1200\, \mathrm{s}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;As calculated before, the force required for slew maneuver is &lt;script type=&quot;math/tex&quot;&gt;0.52\, \mathrm{N}&lt;/script&gt;.
+The corresponding impulse is,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\text{Impulse}_{slew} = 0.52 \times 1200 = 624\, \mathrm{N \cdot s}
+\end{equation*}&lt;/script&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Calculating desaturation impulse:&lt;/strong&gt; The thruster has to fire 5475 pulses
+in 5 years to desaturate the wheels.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Since each pulse lasts &lt;script type=&quot;math/tex&quot;&gt;1\, \mathrm{s}&lt;/script&gt;, the total desaturation pulse duration
+for one wheel is &lt;script type=&quot;math/tex&quot;&gt;365\, \mathrm{s} \times 5\, \text{years} = 1825\, \mathrm{s}&lt;/script&gt;. 
+The corresponding impulse is &lt;script type=&quot;math/tex&quot;&gt;0.8 \times 1825 = 1460\, \mathrm{N \cdot s}&lt;/script&gt;.
+Therefore, for a three-wheel system,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+\text{Impulse}_{desat} = 3 \times 1460 = 4380\, \mathrm{N \cdot s}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;Total impulse due to both slew maneuver and desaturation is 
+&lt;script type=&quot;math/tex&quot;&gt;624 + 4380 = 5004\, \mathrm{N \cdot s}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Propellant mass can now be estimated using the equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation*}
+M_{p} = \frac{\text{Impulse}_{tot}}{I_{sp}\,g}
+\end{equation*}&lt;/script&gt;
+
+&lt;p&gt;Assuming that the thruster runs on hydrazine for which &lt;script type=&quot;math/tex&quot;&gt;I_{sp}=200\, \mathrm{s}&lt;/script&gt;
+is a conservative estimate, and taking &lt;script type=&quot;math/tex&quot;&gt;g = 9.8\, \mathrm{m/s^{2}}&lt;/script&gt;, we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\boxed{M_{p} = 2.55\, \mathrm{kg}}.  
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;Reference&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;W J Larson et al. Space Mission Analysis and Design. 3rd Edition. Published
+jointly by Microcosm Press and Kluwer Academic Publishers&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="space" /><summary type="html">Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers</summary></entry></feed>

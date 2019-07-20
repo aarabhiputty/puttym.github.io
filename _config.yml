@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Someone's Blog # Madhukara Putty 
+title: Sea of Tranquility
 #email: your-email@example.com
 #description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://puttym.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://puttym.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: msputty26
-github_username: (add later) 
+github_username: puttym 
 
 # Build settings
-markdown: kramdown
+markdown: kramdown #Pandoc
 theme: minima
 plugins:
   - jekyll-feed

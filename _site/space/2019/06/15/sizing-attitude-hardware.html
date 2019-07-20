@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sizing Attitude Control Hardware | Sea of Tranquility</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Sizing Attitude Control Hardware" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers" />
+<meta property="og:description" content="Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers" />
+<link rel="canonical" href="http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html" />
+<meta property="og:url" content="http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html" />
+<meta property="og:site_name" content="Sea of Tranquility" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-15T00:00:00+05:30" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html"},"@type":"BlogPosting","url":"http://localhost:4000/space/2019/06/15/sizing-attitude-hardware.html","dateModified":"2019-06-15T00:00:00+05:30","datePublished":"2019-06-15T00:00:00+05:30","headline":"Sizing Attitude Control Hardware","description":"Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Sea of Tranquility" /></head>
+<!-- Mathjax Support -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Sea of Tranquility</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sizing Attitude Control Hardware</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-15T00:00:00+05:30" itemprop="datePublished">Jun 15, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Active control of spacecraft attitude can be achieved by combinations of</p>
+<ul>
+  <li>Reaction wheels</li>
+  <li>Momentum wheels</li>
+  <li>Control moment gyros (CMG)</li>
+  <li>Thrusters and</li>
+  <li>Magnetic torquers</li>
+</ul>
+
+<p>In this section, we size each of the above hardware (except CMG) for the hypothetical
+satellite with the following specifications:</p>
+
+<ul>
+  <li>
+    <p><strong>Mass:</strong> <script type="math/tex">215\, \mathrm{kg}</script></p>
+  </li>
+  <li>
+    <p><strong>Moments of inertia:</strong> <script type="math/tex">I_{x} \approx I_{z} \approx 90\, \mathrm{kg \cdot
+m^{2}}</script>, and <script type="math/tex">I_{y} \approx 60\, \mathrm{kg \cdot m^{2}}</script></p>
+  </li>
+  <li>
+    <p><strong>Orbit altitude:</strong> <script type="math/tex">700\, \mathrm{km}</script>, Circular</p>
+  </li>
+  <li>
+    <p><strong>Lifetime:</strong> 5 years</p>
+  </li>
+  <li>
+    <p><strong>Slew rate:</strong> <script type="math/tex">% <![CDATA[
+< 0.1^{\circ} \mathrm{/ s} %]]></script></p>
+  </li>
+  <li>
+    <p><strong>Pointing accuracy:</strong> <script type="math/tex">\approx 0.1^{\circ}</script></p>
+  </li>
+  <li>
+    <p><strong>Mission:</strong> Earth-pointing except for one optional <script type="math/tex">30^{\circ}</script> maneuver
+per month to a target of opportunity</p>
+  </li>
+</ul>
+
+<p>Note that the same satellite was used for calculating disturbance torques.</p>
+
+<p><br /></p>
+<h3 id="sizing-of-reaction-wheels">Sizing of reaction wheels</h3>
+<p>Sizing of reaction wheels requires determination of two parameters. They are:</p>
+
+<p>1 <strong>Angular momentum capacity</strong>: Angular momentum capacity is calculated
+keeping in mind the cyclic disturbances.  The wheel should have enough capacity
+to store angular momentum resulting from cyclic disturbances without the need
+for frequent desaturation. The minimum angular momentum capacity required is
+determined by the average cyclic disturbance torque in a quarter or a half
+orbit.</p>
+
+<p>In addition to calculating the momentum storage capacity, we shoudld also decide 
+how often should the wheels be desaturated. This factor depends more on secular
+disturbances because angular momentum resulting from them accumulate over time and
+push the wheel towards saturation. Therefore, frequency of wheel desaturation 
+depends on the secular torques and the momentum storage capacity of the wheel.</p>
+
+<p>For 3-axis control, at least three wheels are required across each of the axes.
+A fourth redundant wheel is highly desirable to continue the mission in the event
+of failure of a wheel. Ideally, the wheels are mounted perpendicular to each 
+other. Other configurations are also possible, but they come at a cost.</p>
+
+<p>Let <script type="math/tex">T_{D}</script> be the worst case cyclic disturbance torque. If it is due to gravity
+gradient, then the maximum disturbance accumulates in quarter of an orbit – like 
+a sinusoidal wave. A simplified expression for such a disturbance torque is</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+h_{RW} = (T_{D}) \frac{\text{P}}{4}\,(0.707)
+\end{equation}
+\label{eq:ang-mom-capacity}</script>
+
+<p>where,</p>
+
+<p><script type="math/tex">h_{RW}</script> is the angular momentum of the wheel</p>
+
+<p><script type="math/tex">T_{D}</script> is the worst case disturbance torque due to gravity gradient</p>
+
+<p><script type="math/tex">0.707</script> is the rms value of a sinusoidal function</p>
+
+<p><script type="math/tex">P=5925\, \mathrm{s}</script> is the period of the satellite. It is calculated using
+the formula <script type="math/tex">\frac{2\pi}{\sqrt{\mu}} r^{3/2}</script>, where <script type="math/tex">\mu = 398,600\,
+\mathrm{km^{3}/s^{2}}</script> is the gravitational parameter, and <script type="math/tex">r</script> is the radius
+of the satellite’s orbit as measured from the center of the earth.</p>
+
+<p>The worst case gravity gradient torque is experienced when the satellite is
+operating in <em>target-of-opportunity</em> mode. The corresponding torque is 
+<script type="math/tex">4.5 \times 10^{-5} \mathrm{N \cdot m}</script>. Plugging in these values into 
+\eqref{eq:ang-mom-capacity}, the angular momentum capcity of the wheel is found
+to be,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\boxed{h_{RW} = 4.6 \times 10^{-2}\, \mathrm{N \cdot m \cdot s}}
+\end{equation*}</script>
+
+<p>We could go with a small reaction wheel with a momentum storage of 
+<script type="math/tex">0.4\, \mathrm{N \cdot m \cdot s}</script>. This would also provide more than
+9x margin.</p>
+
+<ol>
+  <li><strong>Torque authority</strong>: Torque capacity is mostly driven by slew rate 
+requirements. Slew rate and the required torque are related by the expression,</li>
+</ol>
+
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\theta}{2} = \frac{1}{2}\frac{T_{RW}}{I}\left(\frac{t}{2}\right)^{2}
+\end{equation}
+\label{eq:wheel-torque}</script>
+
+<p>where,</p>
+
+<p><script type="math/tex">\theta = 30^{\circ} = 30 \times \frac{\pi}{180}\, \mathrm{rad}</script> is the slew 
+angle</p>
+
+<p><script type="math/tex">T_{RW}</script> is the torque required for the slew</p>
+
+<p><script type="math/tex">I = 90\, \mathrm{kg \cdot m^{2}}</script> is the moment of inertia of the satellite 
+along the slew axis</p>
+
+<p><script type="math/tex">t=600\, \mathrm{s}</script> is the time taken for slew.</p>
+
+<p>Solving for <script type="math/tex">T_{RW}</script> in \eqref{eq:wheel-torque}, and substituting the above
+values, we get,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\boxed{T_{RW} = 5.24 \times 10^{-4}\, \mathrm{N \cdot m}}
+\end{equation*}</script>
+
+<p><br /></p>
+<h3 id="sizing-of-momentum-wheels">Sizing of momentum wheels</h3>
+<p>Momentum wheel spins almost at constant speed about the pitch axis. Unlike 
+reaction wheels, momentum wheels do not change the attitude of the satellite,
+but only maintain the current attitude.</p>
+
+<p>Since the momentum wheel spins along the pitch axis, it can influence both
+roll and yaw accuracies. Yaw accuracy, disturbance torque, and the wheel 
+momentum are related by the expression,</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+T_{D} \times \frac{P}{4} = h_{MW} \theta_{a}
+\end{equation}
+\label{eq:mom-wheel}</script>
+
+<p>where <script type="math/tex">\theta_{a}</script> is the yaw accuracy in radian.</p>
+
+<p>Solving \eqref{eq:mom-wheel} for <script type="math/tex">h_{MW}</script>, and substituting the values, we get,</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\boxed{h_{MW} = 37.36\, \mathrm{N \cdot m \cdot s}}
+\end{equation}</script>
+
+<p><br /></p>
+<h3 id="sizing-magnetic-torquers">Sizing magnetic torquers</h3>
+<p>Let <script type="math/tex">\mathbf{D}</script> be the dipole moment of the residual magnetic field inside
+the spacecraft. If <script type="math/tex">\mathbf{B}</script> is the strength of the earth’s magnetic field,
+then the maximum torque experienced by the dipole is given by <script type="math/tex">T = D \cdot B</script>, 
+where <script type="math/tex">D</script> and <script type="math/tex">B</script> are the magnitudes of the corresponding vector quantities.</p>
+
+<p>Since <script type="math/tex">T = 4.5 \times 10^{-5}\, \mathrm{N \cdot m}</script> and 
+<script type="math/tex">B = 4.5 \times 10^{-5}\, \mathrm{Tesla}</script>, the required dipole moment turns 
+out to be</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\boxed{D = 1\, \mathrm{A \cdot m^{2}}}
+\end{equation}</script>
+
+<p>I am not able to understand this because exactly the same equation was used
+to calculate the torque due to magnetic field with an assumed dipole moment
+of <script type="math/tex">1\, \mathrm{A \cdot m^{2}}</script> !</p>
+
+<p><br /></p>
+<h3 id="sizing-thrusters">Sizing thrusters</h3>
+<p>Thrusters provide control torque to the satellite. Unlike reaction wheels, they
+can change the total angular momentum of the satellite. They can also be used to
+desaturate the wheels.</p>
+
+<p>The torque provided by a thruster is given by,</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\mathbf{T} = \mathbf{F \times L}.
+\end{equation}</script>
+
+<p>The torque is maximum when the direction of the force and the moment arm are
+perpendicular to each other. Therefore, to counteract the worst-case disturbance
+torque, the force required is,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+F &= \frac{T_{D}}{L} \\
+  &= \frac{4.5 \times 10^{-5}}{0.5} \\
+  &= 9 \times 10^{-5}\, \mathrm{N}.
+\end{align*} %]]></script>
+
+<p>where <script type="math/tex">F</script>, <script type="math/tex">T_{D}</script>, and <script type="math/tex">L</script> are the magnitudes of the vector quantities
+force, worst-case disturbance torque, and thruster moment arm respectively.</p>
+
+<p>The required force for counteracting worst-case disturbance torque is very small.
+This indicates that the thruster sizing is more likely to be determined by
+slew rate requirements.</p>
+
+<h4 id="sizing-force-level-to-meet-slew-rates"><strong>Sizing force level to meet slew rates</strong></h4>
+<p>A thruster can change the angular momentum of the spacecraft by providing control
+torque. In our example spacecraft, the slew rate requirement is given to be
+<script type="math/tex">30^{\circ}</script> in less than 10 minutes. We take the highest slew rate to be 
+<script type="math/tex">30^{\circ}</script> in 1 min. The required angular velocity for this maneuver is,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\dot{\theta} = \frac{30^{\circ}}{60\, \mathrm{s}} = 0.5^{\circ}\, \mathrm{s^{-1}}.
+\end{equation*}</script>
+
+<p>The entire slewing maneuver can be divided into three parts:</p>
+<ol>
+  <li>The spacecraft accelerates angularly until its velocity reaches the target
+value <script type="math/tex">0.5^{\circ}\, \mathrm{s^{-1}}</script></li>
+  <li>The spacecraft maintains the angular velocity until the maneuvering operation
+is over</li>
+  <li>The spacecraft decelerates angularly until its angular velocity reaches
+zero.</li>
+</ol>
+
+<p>Let’s assume that the acceleration and deceleration each will take 5% of the 
+total maneuver time (1 min). The corresponding angular acceleration is,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+\ddot{\theta} &= \frac{\dot{\theta}}{t} \\
+              &= \frac{0.5^{\circ}\, \mathrm{s^{-1}}}{3\, \mathrm{s}} \\
+              &= 0.169^{\circ}\, \mathrm{s^{-2}} \\
+              &= 2.91 \times 10^{-3}\, \mathrm{rad \cdot s^{-2}} 
+\end{align*} %]]></script>
+
+<p>To find the corresponding force, we use the relation <script type="math/tex">T=F_{slew}L=I\ddot{\theta}</script>,
+where <script type="math/tex">I = 90\, \mathrm{kg \cdot m^{2}}</script> is the moment of inertia across the 
+roll (x) axis.</p>
+
+<p>Solving for <script type="math/tex">F</script>, and substituting the values, we get,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\boxed{F_{slew} = 0.52\, \mathrm{N}}.
+\end{equation*}</script>
+
+<p>A force of same magnitude, but applied in opposite direction, will be required
+for deceleration.</p>
+
+<h4 id="sizing-force-levels-for-momentum-dumping"><strong>Sizing force levels for momentum dumping</strong></h4>
+<p>Secular disturbances push reaction wheels towards their saturation speeds.
+Hence, wheels must be slowed down and desaturated regularly. The force required
+to desaturate a wheel depends on the momentum storage capacity of the wheel
+and the time it takes to desaturate the wheel.</p>
+
+<p>The force level for desaturation of one wheel can be calculated by the formula,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+F_{desat} = \frac{h}{Lt}
+\end{equation*}</script>
+
+<p>Here, <script type="math/tex">h</script> is the is the momentum storage of the wheel calculated earlier in
+this article. Assuming that we want to desaturate one wheel in 1 sec, we get,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\boxed{F_{desat} = 0.8\, \mathrm{N}}
+\end{equation*}</script>
+
+<h4 id="how-many-times-should-the-thruster-fire"><strong>How many times should the thruster fire?</strong></h4>
+<p>Assume that the thruster fires only for</p>
+<ol>
+  <li>The <script type="math/tex">30^{\circ}</script> slew maneuver</li>
+  <li>Desaturation of reaction wheels</li>
+</ol>
+
+<p>Mission requirements state that the <script type="math/tex">30^{\circ}</script> maneuvers are needed only
+once in a month. Each maneuver has an acceleration pulse and a decelaration pulse.
+Also, controlling movement of spacecraft’s yaw axis requires rotation of the
+spacecraft along pitch and roll axes, each of which require a separate pulse.
+Therefore, each maneuver needs,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\text{2 pulses (for accn. and decn.)} \times \text{2 axes} = \text{4 pulses}.
+\end{equation*}</script>
+
+<p>Since <script type="math/tex">30^{\circ}</script> slew maneuver is a monthly event, there are <script type="math/tex">4 \times 12
+= 48</script> pulses in a year.</p>
+
+<p>Now, let’s look at desaturation of wheels. Assume that there are 3 wheels and
+each of them must be desaturated once every day. In one year, desaturation results
+in,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\text{1 pulse} \times \text{3 wheels} \times \text{365 days} = \text{1095 pulses}.
+\end{equation*}</script>
+
+<p>Therefore, total number of pulses per year is <script type="math/tex">48 + 1095 = 1143</script>. Since the 
+design life of the satellite is 5 years, the thruster has to fire 
+<script type="math/tex">1143 \times 5 = 5715</script> pulses.</p>
+
+<p>Pulse ratings for small thrusters typically varies between 20,000 and 50,000.
+Therefore, finding the thruster that meets our requirement won’t be a problem.</p>
+
+<h4 id="estimating-propellant-mass"><strong>Estimating propellant mass</strong></h4>
+<p>Propollant mass consumed is a function of the force required and the duration
+for which that force must be applied. It also depends on the specific impulse,
+<script type="math/tex">I_{sp}</script>, of the fuel – larger the value of <script type="math/tex">I_{sp}</script> lower the fuel 
+required.</p>
+
+<p>The first step in estimating propellant mass is the calculation of total impulse.
+Impulse is the product of force and the duration of application of the force.
+The total impulse is the sum of slew maneuver impulse and the wheel desaturation
+impulse.</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\text{Impulse}_{tot} = \text{Impulse}_{slew} + \text{Impulse}_{desat}
+\end{equation*}</script>
+
+<ol>
+  <li><strong>Calculatinng slew maneuver impulse</strong>: The slew maneuver has an acceleration
+and a deceleration pulse each lasting <script type="math/tex">3\, \mathrm{s}</script>. The corresponding total
+pulse duration over satellite’s design life is</li>
+</ol>
+
+<script type="math/tex; mode=display">\begin{equation*}
+48\, \text{per year} \times 5 \text{years} \times (3+3) \text{second} = 
+1200\, \mathrm{s}
+\end{equation*}</script>
+
+<p>As calculated before, the force required for slew maneuver is <script type="math/tex">0.52\, \mathrm{N}</script>.
+The corresponding impulse is,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\text{Impulse}_{slew} = 0.52 \times 1200 = 624\, \mathrm{N \cdot s}
+\end{equation*}</script>
+
+<ol>
+  <li><strong>Calculating desaturation impulse:</strong> The thruster has to fire 5475 pulses
+in 5 years to desaturate the wheels.</li>
+</ol>
+
+<p>Since each pulse lasts <script type="math/tex">1\, \mathrm{s}</script>, the total desaturation pulse duration
+for one wheel is <script type="math/tex">365\, \mathrm{s} \times 5\, \text{years} = 1825\, \mathrm{s}</script>. 
+The corresponding impulse is <script type="math/tex">0.8 \times 1825 = 1460\, \mathrm{N \cdot s}</script>.
+Therefore, for a three-wheel system,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+\text{Impulse}_{desat} = 3 \times 1460 = 4380\, \mathrm{N \cdot s}
+\end{equation*}</script>
+
+<p>Total impulse due to both slew maneuver and desaturation is 
+<script type="math/tex">624 + 4380 = 5004\, \mathrm{N \cdot s}</script>.</p>
+
+<p>Propellant mass can now be estimated using the equation,</p>
+
+<script type="math/tex; mode=display">\begin{equation*}
+M_{p} = \frac{\text{Impulse}_{tot}}{I_{sp}\,g}
+\end{equation*}</script>
+
+<p>Assuming that the thruster runs on hydrazine for which <script type="math/tex">I_{sp}=200\, \mathrm{s}</script>
+is a conservative estimate, and taking <script type="math/tex">g = 9.8\, \mathrm{m/s^{2}}</script>, we get,</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\boxed{M_{p} = 2.55\, \mathrm{kg}}.  
+\end{equation}</script>
+
+<p><br />
+<em>Reference</em></p>
+
+<ol>
+  <li>W J Larson et al. Space Mission Analysis and Design. 3rd Edition. Published
+jointly by Microcosm Press and Kluwer Academic Publishers</li>
+</ol>
+
+
+  </div><a class="u-url" href="/space/2019/06/15/sizing-attitude-hardware.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+      <h2 class="footer-heading">Sea of Tranquility</h2>
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <p></p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
