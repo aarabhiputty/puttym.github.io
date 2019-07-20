@@ -1,6 +1,6 @@
 ---
 layout: post
-title: if __name__ == "__main__" &#58;  What does it mean?
+title: Meaning of if __name__ == "__main__"
 date: 2019-07-20
 category: programming
 ---
