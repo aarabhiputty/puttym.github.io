@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-20T22:46:34+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sea of Tranquility</title><entry><title type="html">Introduction to Spacraft Attitude Control</title><link href="http://localhost:4000/space/2019/07/20/intro-attitude-control.html" rel="alternate" type="text/html" title="Introduction to Spacraft Attitude Control" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/07/20/intro-attitude-control</id><content type="html" xml:base="http://localhost:4000/space/2019/07/20/intro-attitude-control.html"></content><author><name></name></author><category term="space" /><summary type="html"></summary></entry><entry><title type="html">Undertsanding Command line Arguments in Python</title><link href="http://localhost:4000/programming/2019/07/20/command-line-arguments.html" rel="alternate" type="text/html" title="Undertsanding Command line Arguments in Python" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/command-line-arguments</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/command-line-arguments.html">&lt;p&gt;Often, passing arguments to a programme through the command line is a useful
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-21T19:46:03+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sea of Tranquility</title><entry><title type="html">Undertsanding Command line Arguments in Python</title><link href="http://localhost:4000/programming/2019/07/20/command-line-arguments.html" rel="alternate" type="text/html" title="Undertsanding Command line Arguments in Python" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/command-line-arguments</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/command-line-arguments.html">&lt;p&gt;Often, passing arguments to a programme through the command line is a useful
 option. Python’s &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; moduel provides the necessary tools for
 achieving this.&lt;/p&gt;
 
@@ -108,7 +108,7 @@ separator is space and/or tab.&lt;/p&gt;
 
 &lt;h4 id=&quot;rearranging-the-data-using-awk&quot;&gt;Rearranging the data using &lt;code class=&quot;highlighter-rouge&quot;&gt;awk&lt;/code&gt;&lt;/h4&gt;
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'{ print $1; print $2; print $3; print $4; print $5 }'&lt;/span&gt; addresses
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Create the file addresses with the following content. Ramesh Shetty, 34, 4th Cross, Kuvempu Nagar, Mysore KA Sureshi Bendre, 56, 3rd Main, T Nagar, Chennai TN John Simon, 24, 5th Main, Jaya Nagar, Bangalore KA G H Shinde, 56, 6th Main, Bandra, Mumbai MH S Manjrekar, 39, 8th Main, Chanakya Puri ND P K Reddy, 67, 9th Main, Charminar, Hyderabad AP</summary></entry><entry><title type="html">if __name__ == “__main__” : What does it mean?</title><link href="http://localhost:4000/programming/2019/07/20/main-in-python.html" rel="alternate" type="text/html" title="if __name__ == &quot;__main__&quot; &amp;#58;  What does it mean?" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/main-in-python</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/main-in-python.html">&lt;p&gt;Simple answer: &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == &quot;__main__&quot;&lt;/code&gt; helps a programme to choose and pick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="programming" /><summary type="html">Create the file addresses with the following content. Ramesh Shetty, 34, 4th Cross, Kuvempu Nagar, Mysore KA Sureshi Bendre, 56, 3rd Main, T Nagar, Chennai TN John Simon, 24, 5th Main, Jaya Nagar, Bangalore KA G H Shinde, 56, 6th Main, Bandra, Mumbai MH S Manjrekar, 39, 8th Main, Chanakya Puri ND P K Reddy, 67, 9th Main, Charminar, Hyderabad AP</summary></entry><entry><title type="html">Meaning of if __name__ == “__main__”</title><link href="http://localhost:4000/programming/2019/07/20/main-in-python.html" rel="alternate" type="text/html" title="Meaning of if __name__ == &quot;__main__&quot;" /><published>2019-07-20T00:00:00+05:30</published><updated>2019-07-20T00:00:00+05:30</updated><id>http://localhost:4000/programming/2019/07/20/main-in-python</id><content type="html" xml:base="http://localhost:4000/programming/2019/07/20/main-in-python.html">&lt;p&gt;Simple answer: &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == &quot;__main__&quot;&lt;/code&gt; helps a programme to choose and pick
 chunks of code from other programmes.&lt;/p&gt;
 
 &lt;p&gt;Without this, the called programme will be executed fully, even if only one
@@ -999,4 +999,150 @@ is a conservative estimate, and taking &lt;script type=&quot;math/tex&quot;&gt;g
 &lt;ol&gt;
   &lt;li&gt;W J Larson et al. Space Mission Analysis and Design. 3rd Edition. Published
 jointly by Microcosm Press and Kluwer Academic Publishers&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="space" /><summary type="html">Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><category term="space" /><summary type="html">Active control of spacecraft attitude can be achieved by combinations of Reaction wheels Momentum wheels Control moment gyros (CMG) Thrusters and Magnetic torquers</summary></entry><entry><title type="html">Euler’s Equation for Spacecraft Attitude Control</title><link href="http://localhost:4000/space/2019/06/10/euler-equation.html" rel="alternate" type="text/html" title="Euler's Equation for Spacecraft Attitude Control" /><published>2019-06-10T00:00:00+05:30</published><updated>2019-06-10T00:00:00+05:30</updated><id>http://localhost:4000/space/2019/06/10/euler-equation</id><content type="html" xml:base="http://localhost:4000/space/2019/06/10/euler-equation.html">&lt;p&gt;The rotational motion of a rigid body is explained by the Euler equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\dot{\mathbf{H}} = \mathbf{T} - \mathbf{\omega \times H},
+\end{equation}
+\label{eq:euler}&lt;/script&gt;
+
+&lt;p&gt;where, &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{H}&lt;/script&gt; is the angular momentum of the rigid body, &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; is the
+angular frequency, &lt;script type=&quot;math/tex&quot;&gt;\mathbf{T}&lt;/script&gt; is the external torque, and &lt;script type=&quot;math/tex&quot;&gt;\dot{\mathbf{H}}&lt;/script&gt;
+is the rate of change of angular momentum which is nothing but the net torque
+on the body.&lt;/p&gt;
+
+&lt;p&gt;Euler equation is the fundamental equation of motion for rotational dynamics.
+It is also the equation of conservation of angular momentum. In rotational
+motion, angular momentum is the quantity that remains unchanged unless and until
+an external torque acts on the body. It is the rotational analogue of linear
+momentum – the quantity that remains unchanged in translational motion unless
+an external force acts on the body.&lt;/p&gt;
+
+&lt;p&gt;Angular momentum is calculated as the product of moment of inertia of the body
+and its angular velocity.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\mathbf{H} = [I] \mathbf{\omega}
+\end{equation}
+\label{eq:ang-mom}&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; is a &lt;script type=&quot;math/tex&quot;&gt;3 \times 3&lt;/script&gt; symmetric matrix called the &lt;em&gt;inertia tensor.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The elements of the inertia tensor vary according to the frame in which the motion
+is described. For every rotational motion, it is possible to find a frame of
+reference in which the inertia tensor becomes becomes diagonal. Such a frame is
+called the &lt;em&gt;principal axis frame&lt;/em&gt;. Also, it is desirable to describe the motion
+in principal axis frame as it greatly simplifies the inertia matrix.&lt;/p&gt;
+
+&lt;p&gt;In equation \eqref{eq:euler}, if &lt;script type=&quot;math/tex&quot;&gt;\mathbf{T}=0&lt;/script&gt;, then 
+&lt;script type=&quot;math/tex&quot;&gt;\dot{\mathbf{H}} = \mathbf{\omega \times H}&lt;/script&gt;. Since angular momentum is a 
+conserved quantity, its magnitude can not change. Also, in general, for 3D rigid
+bodies, &lt;script type=&quot;math/tex&quot;&gt;\mathbf{\omega}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathbf{H}&lt;/script&gt; are not parallel vectors and hence
+their cross product is not zero. Therefore, in the absence of an external
+torque, &lt;script type=&quot;math/tex&quot;&gt;\dot{\mathbf{H}}&lt;/script&gt; represents only a &lt;em&gt;change&lt;/em&gt; in the direction of
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{H}&lt;/script&gt;. In other words, an external force is necessary to change the 
+magnitude of the angular momentum vector.&lt;/p&gt;
+
+&lt;p&gt;By substituting equation \eqref{eq:ang-mom} in equation \eqref{eq:euler},
+we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\dot{\mathbf{H}} = \mathbf{T} - \mathbf{\omega} \times [I] \mathbf{\omega}.
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;One might be tempted to conclude that that the cross product vanishes as 
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{\omega}&lt;/script&gt; appears in both the vectors. This would have been the case
+if &lt;script type=&quot;math/tex&quot;&gt;[I]&lt;/script&gt; were a scalar. Since &lt;script type=&quot;math/tex&quot;&gt;[I]&lt;/script&gt; is a tensor here, the product
+&lt;script type=&quot;math/tex&quot;&gt;[I] \mathbf{\omega}&lt;/script&gt; is given by,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation}
+I \mathbf{\omega} =
+\begin{bmatrix}
+I_{x} &amp; 0 &amp; 0 \\
+0 &amp; I_{y} &amp; 0 \\
+0 &amp; 0 &amp; I_{z}
+\end{bmatrix}
+\begin{bmatrix}
+\omega_{x} \\
+\omega_{y} \\
+\omega_{z}
+\end{bmatrix} =
+\begin{bmatrix}
+\omega_{x}I_{x} \\
+\omega_{y}I_{y} \\
+\omega_{z}I_{z}
+\end{bmatrix}
+\end{equation} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Here &lt;script type=&quot;math/tex&quot;&gt;[I]&lt;/script&gt; is dioagonal because it is computed in the principal axis frame. Now,
+the cross product becomes,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+\mathbf{\omega} \times [I] \mathbf{\omega} &amp;= 
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+\omega_{x} &amp; \omega_{y} &amp; \omega_{z}\\
+\omega_{x}I_{x} &amp; \omega_{y}I_{y} &amp; \omega_{z}I_{z} \\
+\end{vmatrix} \\
+&amp;= \hat{i}\left(I_{z} -I_{y}\right)\omega_{y}\omega_{z}
++ \hat{j}\left(I_{x} -I_{z}\right)\omega_{x}\omega_{z}
++ \hat{k}\left(I_{y} -I_{x}\right)\omega_{x}\omega_{y}
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;A satellite will have different components like reaction wheels and gyroscopes
+spinning inside the housing that contribute to the angular momentum of the
+satellite. Therefore, the total angular momentum of the satellite 
+&lt;script type=&quot;math/tex&quot;&gt;\mathbf{H}&lt;/script&gt; can be written as,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+\mathbf{H} = [I] \mathbf{\omega} + \mathbf{h},
+\end{equation}
+\label{eq:ang-mom-sat}&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\mathbf{h}&lt;/script&gt; is the angular momentum contributed by the rotating objects.&lt;/p&gt;
+
+&lt;p&gt;By plugging in equation \eqref{eq:ang-mom-sat} into equation \eqref{eq:euler},
+we get,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} ([I] \mathbf{\omega} + \mathbf{h}) &amp;= 
+\mathbf{T} - \mathbf{\omega \times H} \\
+[I] \dot{\mathbf{\omega}} + \dot{[I]} \mathbf{\omega} + \dot{\mathbf{h}} &amp;=
+\mathbf{T} - \mathbf{\omega \times H} \\
+[I] \dot{\mathbf{\omega}} &amp;= \mathbf{T} - \dot{\mathbf{h}} - \dot{[I]}{\mathbf{\omega}}
+- \mathbf{\omega \times H}.
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;In this equation,&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt; is the contribution by the external torque to attitude dynamics of the
+satellite.&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\dot{\mathbf{h}}&lt;/script&gt; provides the relationship between changes in the angular
+velocity of rotating objects inside the satellite and the angular velocity
+of the satellite itself. The torque provided by these objects are called
+internal torques.&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\dot[I]\mathbf{\omega}&lt;/script&gt; shows how changes in mass distribution of the 
+satellite can contribute to changes in the attitude of the spacecraft. A typical example is the 
+unfolding of solar panels once the satellite is out of the launch vehicle.
+This event completely changes the mass distribution of the satellite and hence
+its inertia tensor. If there is no change in mass distribution, 
+&lt;script type=&quot;math/tex&quot;&gt;\dot[I]\mathbf{\omega} = 0&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The term &lt;script type=&quot;math/tex&quot;&gt;\mathbf{\omega} \ times \mathbf{H}&lt;/script&gt; is called the gyroscopic torque. 
+It changes only the direction of the angular momentum of the satellite, but not 
+the magnitude.&lt;/p&gt;
+
+&lt;p&gt;In summary, the angular acceleration of a satellite is influenced by,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The external torques – can change the total angular momentum of the satellite&lt;/li&gt;
+  &lt;li&gt;Internal torques – Torque contribution by onboard objects. Can only
+exchange momentum with different rotating parts of the satellite.&lt;/li&gt;
+  &lt;li&gt;Changes in mass distribution of the satellite and&lt;/li&gt;
+  &lt;li&gt;Gyroscopic torque.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="space" /><summary type="html">The rotational motion of a rigid body is explained by the Euler equation,</summary></entry></feed>
