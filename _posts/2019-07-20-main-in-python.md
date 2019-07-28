@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Meaning of if __name__ == "__main__"
+title: Meaning of if __name__ == "__main__" in Python
 date: 2019-07-20
 category: programming
 ---
