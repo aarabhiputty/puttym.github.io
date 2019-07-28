@@ -144,3 +144,6 @@ $$
 \end{pmatrix}.
 \end{equation}
 $$
+
+*Reference*
+Howard Curtis. Orbital Mechanics for Engineering Students. Elsevier Butterworth-Heinemann
