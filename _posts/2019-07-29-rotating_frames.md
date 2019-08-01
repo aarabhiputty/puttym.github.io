@@ -74,8 +74,8 @@ Q_{z}\frac{d\mathbf{\hat{k}}}{dt}
 \label{eq:dQ}
 $$
 
-The absolute time derivative of a vector with constant magnitude and varying direction
-is given by,
+[The absolute time derivative](https://puttym.github.io/physics/2019/08/01/derivative-of-a-vector.html) 
+of a vector with constant magnitude and varying direction is given by,
 
 $$
 \begin{equation}
