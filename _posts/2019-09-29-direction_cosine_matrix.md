@@ -15,7 +15,7 @@ figure below. Frame base vectors are related by
 <br />
 
 <figure>
-<img src="/assets/direction_cosines.jpg" alt="gyroscope" width="500" height="500"><br />
+<img src="/assets/direction_cosines.jpg" alt="frame orientations" width="500" height="500"><br />
 <figcaption> Relative orientation of N and B frames.</figcaption> <br />
 </figure>
 
