@@ -15,7 +15,7 @@ figure below. Frame base vectors are related by
 <br />
 
 <figure>
-<img src="/assets/direction_cosines.jpg" alt="gyroscope" width="500" height="500"><br />
+<img src="/assets/direction_cosines.jpg" alt="frame orientations" width="500" height="500"><br />
 <figcaption> Relative orientation of N and B frames.</figcaption> <br />
 </figure>
 
@@ -122,9 +122,100 @@ $$
 [C][C]^\intercal = [C]^\intercal [C] = [I_{3 \times 3}],
 $$
 
-where $$[I_{3 \times 3}]$$ is the identity matrix. This proves the fact that the inverse of a DCM is is its transpose.
+where $$[I_{3 \times 3}]$$ is the identity matrix. This proves the fact that 
+the inverse of a DCM is is its transpose.
+
+### Two letter notation
+Two letter notation mentiones the frames whose relative orientations to each 
+other are described by the DCM. For example, the DCM $$[C]$$ will be written as
+$$[BN]$$ clearly demoting that the matrix is a description of the orientation
+of the $$B$$ frame relative to the $$N$$ frame. In this notation, equation 
+\eqref{eq:DCM-n2b} can be written as,
+
+$$
+\begin{equation}
+\mathbf{\hat{\{b\}}} = [BN]{\mathbf{\hat{\{n\}}}}.
+\end{equation}
+$$
+
+### Examples of DCMs
+
+The identity matrix,
+
+$$
+\begin{equation}
+[C] =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\end{equation}
+$$
+
+is a DCM describing two frames that are perfectly aligned with each other.
+In other words, it describes zero rotation.
+
+Now consider the matrix,
+
+$$
+[C] = 
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & 1\\
+1 & 0 & 0\\
+0 & 1 & 1
+\end{bmatrix}.
+\end{equation}
+\label{eq:not-a-DCM}
+$$
+
+The first row tells us that 
+$$\mathbf{\hat{b_{1}}} = \mathbf{\hat{n_{1}}} + \mathbf{\hat{n_{3}}}$$. This 
+implies that the length of $$\mathbf{\hat{b_{1}}}$$ is $$\sqrt{2}$$, which is not
+correct because it is a unit vector. Therefore, equation \eqref{eq:not-a-DCM} is not a
+DCM.
+
+Another interesting DCM is,
+
+$$
+[C] =
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{bmatrix}
+\end{equation}
+\label{eq:left-handed}
+$$
+
+Here, note that, $$\mathrm{\hat{b_{1}}} = \mathrm{\hat{n_{1}}}$$, 
+$$\mathrm{\hat{b_{2}}} = \mathrm{\hat{n_{3}}}$$, and 
+$$\mathrm{\hat{b_{3}}} = \mathrm{\hat{n_{2}}}$$. The cross products of the 
+base vectors $$\mathrm{\hat{\{b\}}}$$ are give by,
+
+$$
+\begin{align}
+\mathrm{\hat{b_{1}}} \times \mathrm{\hat{b_{2}}} =
+\mathrm{\hat{n_{1}}} \times \mathrm{\hat{n_{3}}} = -\mathbf{\hat{n_{2}}} =
+-\mathbf{\hat{b_{3}}} \\
+\mathrm{\hat{b_{2}}} \times \mathrm{\hat{b_{3}}} =
+\mathrm{\hat{n_{3}}} \times \mathrm{\hat{n_{2}}} = -\mathbf{\hat{n_{1}}} =
+-\mathbf{\hat{b_{1}}} \\
+\mathrm{\hat{b_{3}}} \times \mathrm{\hat{b_{1}}} =
+\mathrm{\hat{n_{2}}} \times \mathrm{\hat{n_{1}}} = -\mathbf{\hat{n_{3}}} =
+-\mathbf{\hat{b_{2}}}.
+\end{align}
+$$
+
+Clearly, the base vectors $$\mathbf{\hat{\{b\}}}$$ form a left handed
+coordinated system. Therefore, the DCM in equation \eqref{eq:left-handed} 
+can not be included in an attitude description using a right
+handed system.
 
 <br />
+
 *Reference*
 
 1. H Schaub and J Junkins. Analytical Mechanics of Space Systems. Published by
