@@ -10,7 +10,7 @@ of attitude coordinates. For this reason, it's called the *Mother of all
 Attitude Parameterisations*.
 
 Consider two frames $$N$$ and $$B$$ with relative orientations as shown in
-figure below. Frame base vectors are related by
+figure below.
 
 <br />
 
