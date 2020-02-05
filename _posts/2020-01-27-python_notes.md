@@ -5,7 +5,6 @@ date: 2020-01-27
 category: programming
 ---
 
-
 + `=` and `==` are operators. `=` is used to asign a value to a variable.
 `==` is used to check if two values are equal. The result of the `==` operator
 is a boolean and this can be used write crisp code.
@@ -57,6 +56,20 @@ of the function.
 + **Local variables** are created when the function is called and disappear
 after the function is executed. They are not accessible from outside of the
 function in which they are first used.
+
++ **Parameters and Arguments**: Parameters are the variables names used in the
+function definition. Arguments are the actual values passed on to the parameters
+while executing the function.
+
+In the example giveb below, `x` is the parameter, and 2 is the argument passed on
+to it.
+
+```python
+def foo(x):
+  return x**2
+
+print(foo(x=6))
+```
 
 + **if-else statement**
 If more than one condition is true, then only the first true branch is run.
