@@ -7,6 +7,19 @@ category: machine learning
 
 *A dump of pandas commands which I have found useful.*
 
+* **Plotting code example**
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(5, 5))
+df['CO2'].plot(x='XData', y='YData', kind='line', color='b', ax=ax)
+ax.set(title='Title', xlabel='XLabel', ylabel='Ylabel')
+ax.legend().set_visible(False)
+fig.savefig('file.png', transparent=False, dpi=300, bbox_inches='tight')
+plt.show()
+```
+
 * **Change datatype of selected columns while creating a dataframe**
   - Use the `converters` parameter
 ```python
@@ -69,4 +82,7 @@ df.isnull().sum() # Find number of NaN values
 ```python
 df.iloc[2:60] #selects rows from 2 to 59
 ```
-
+* **Plot command**
+```python
+f = df['CO2'].plot(color='b')
+```
