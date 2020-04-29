@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Random Python notes
-date: 2020-01-27
+date: 2020-04-29
 category: programming
 ---
 
@@ -197,6 +197,16 @@ are not strings. Try `type(True)` and `type(False)`
     - `float("3")` returns 3.0
     - `float("3.14")` returns 3.14
     - `float("Hi")` returns an error message
+
+<br>
+* **Split a number into integer and decimal parts**
+```python
+from math import modf
+
+d, i = modf(123.456) #modf() returns a tuple
+print(d) # Decimal part
+print(i)
+```
 
 <br />
 *Reference*
