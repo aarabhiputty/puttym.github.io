@@ -200,12 +200,13 @@ are not strings. Try `type(True)` and `type(False)`
 
 <br>
 * **Split a number into integer and decimal parts**
+
 ```python
 from math import modf
 
 d, i = modf(123.456) #modf() returns a tuple
 print(d) # Decimal part
-print(i)
+print(i) # Integer part
 ```
 
 <br />
