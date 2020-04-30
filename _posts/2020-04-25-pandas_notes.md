@@ -5,17 +5,33 @@ date: 2020-04-25
 category: machine learning
 ---
 
-*A dump of pandas commands which I have found useful.*
+*A dump of pandas functions which I have found useful. Use with discretion.*
 
 * **Plotting code example**
 
 ```python
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(5, 5))
-df['CO2'].plot(x='XData', y='YData', kind='line', color='b', ax=ax)
+fig = plt.figure(figsize=(6,6)) # Create a figure object
+ax = fig.subplots()
+
+#Plot CO2 on y-axis and index along x-axis.
+df['CO2'].plot(kind='line', color='b', ax=ax)
+
+#If two columns are being plotted, then we should speficy both of them
+df.plot(x='x-column', y='y-column', kind='line', color='b', ax=ax)
+
 ax.set(title='Title', xlabel='XLabel', ylabel='Ylabel')
-ax.legend().set_visible(False)
+ax.legend().set_visible(False) #Remove legend
+ax.legend(loc="upper left")
+
+#Rotate x-tick labels. For datetime objects see below
+for tick in ax.get_xticklabels():
+	tick.set_rotation(45)
+
+#Formatting datetime tick labels
+fig.autofmt_xdate()
+
 fig.savefig('file.png', transparent=False, dpi=300, bbox_inches='tight')
 plt.show()
 ```
@@ -37,7 +53,7 @@ df.reset_index(drop=True) # Indices changed to default values
   `reset_index` with parameter `drop` switches the indices back to
   default values
 
-* **Print all the entire dataframe/series/column**
+* **Print entire dataframe/series/column**
 ```python
 print(df.to_string()) # Print entire dataframe
 print(df['Year'].to_string()) # Print all values of the column Year
@@ -53,7 +69,8 @@ df.sort_values(['Year', 'Month'], inplace=True) # Same as above
 
   Suppose there are 5 year values which are not sorted. Each each year
   has 12 month values which again are not sorted. The above command
-  first sorts the year values, and then sorts the month values.
+  first sorts the year values, and then sorts the month values for each year
+  value.
 
   `sort_values` has the following parameters. (Refer to documentation
   for a complete list)
@@ -81,8 +98,4 @@ df.isnull().sum() # Find number of NaN values
 * **Selection by row number**
 ```python
 df.iloc[2:60] #selects rows from 2 to 59
-```
-* **Plot command**
-```python
-f = df['CO2'].plot(color='b')
 ```
