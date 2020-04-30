@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Random pandas notes
-date: 2020-04-25
+date: 2020-04-30
 category: machine learning
 ---
 
